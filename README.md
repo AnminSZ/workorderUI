@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # wokorder_ui
 
 > A Vue.js project
@@ -28,3 +29,7 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# workorderUI
+华为工单系统前端代码
+>>>>>>> 477a64083868e835a299a9b05a35a057c15aed21
