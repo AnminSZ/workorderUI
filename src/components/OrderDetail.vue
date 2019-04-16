@@ -43,6 +43,11 @@
               <el-timeline-item :timestamp="workorder.createtime|formatDate" placement="top">
                 <el-card>
                   <h4>{{workorder.content}}</h4>
+                  <p v-if="workorder.attachment!=null">
+                    <a :href="workorder.attachment" style="text-decoration: none;cursor: pointer;color: #E6A23C;">
+                      查看附件
+                    </a>
+                  </p>
                   <p>用户  提交于  {{workorder.createtime | formatDateTime}}</p>
                 </el-card>
               </el-timeline-item>
@@ -50,6 +55,17 @@
                 :timestamp="comment.createtime|formatDate" placement="top" :key="comment.id">
                 <el-card>
                   <h4 v-html="comment.content"></h4>
+<!--                   <div v-if="comment.attachment!=null">
+                      <div style="cursor: pointer;text-decoration: none;color: #E6A23C;" 
+                        @click="handleAttach(comment.attachment)">
+                        查看附件
+                      </div>
+                   </div> -->
+                  <p v-if="comment.attachment!=null">
+                    <a :href="comment.attachment" style="text-decoration: none;cursor: pointer;color: #E6A23C;">
+                      查看附件
+                    </a>
+                  </p>
                   <p>{{comment.role | rolesFilter}}  提交于  {{comment.createtime | formatDateTime}}</p>
                 </el-card>
               </el-timeline-item>
@@ -153,7 +169,8 @@ import Aside from './Aside'
           title:'',
           content:'',
           createtime:'',
-          status:''
+          status:'',
+          attachment:''
         },
         comments:[],
         filters:[{text:'工单已分派',value:1},{text:'正在为您处理',value:2},
@@ -271,6 +288,7 @@ import Aside from './Aside'
           _this.workorder.status = response.data.status;
           _this.workorder.createtime = response.data.createtime;
           _this.workorder.content = response.data.content;
+          _this.workorder.attachment = response.data.attachment;
         });
         this.loadComments();
       },
@@ -331,6 +349,10 @@ import Aside from './Aside'
               })
           })
         }
+        // handleAttach(url){
+        //   alert(url);
+        //   window.location.href=url;
+        // }
       }
   }
 </script>
