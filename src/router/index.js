@@ -5,6 +5,7 @@ import OrderList from '@/components/OrderList'
 import OrderDetail from '@/components/OrderDetail'
 import Home from '@/components/Home'
 import OrderNew from '@/components/OrderNew'
+import AdminHome from '../components/AdminHome'
 Vue.use(Router)
 
 export default new Router({
@@ -25,6 +26,10 @@ export default new Router({
     {
       path:'/',
       component:Home
+    },
+    {
+      path:'/admin',
+      component:AdminHome
     }
   ],
   mode:"history"  //不用显示#号
