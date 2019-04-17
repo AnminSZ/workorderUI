@@ -44,7 +44,9 @@
                 <el-card>
                   <h4>{{workorder.content}}</h4>
                   <p v-if="workorder.attachment!=null">
-                    <a :href="workorder.attachment" style="text-decoration: none;cursor: pointer;color: #E6A23C;">
+                    <a target="_blank" :href="workorder.attachment" 
+                      rel="noopener noreferrer"  style="text-decoration: none;cursor: pointer;color: #409EFF;">
+                      <i class="el-icon-share"></i>
                       查看附件
                     </a>
                   </p>
@@ -62,7 +64,8 @@
                       </div>
                    </div> -->
                   <p v-if="comment.attachment!=null">
-                    <a :href="comment.attachment" style="text-decoration: none;cursor: pointer;color: #E6A23C;">
+                    <a :href="comment.attachment" target="_blank" style="text-decoration: none;cursor: pointer;color: #409EFF;">
+                      <i class="el-icon-view"></i>
                       查看附件
                     </a>
                   </p>
