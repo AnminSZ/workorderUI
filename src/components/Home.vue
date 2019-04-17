@@ -1,6 +1,6 @@
 <template>
-  <el-container>
-    <el-header class="home-header">
+  <el-container class="home-container">
+    <el-header style="display: flex;align-items: center;justify-content: space-between;box-sizing: content-box;padding: 0px;background-color: #ffffff;">
         
         <div style="float: left;">
           <img src="../assets/image/logo_huawei.png" style="margin-top:15px;margin-left:15px;">
@@ -41,7 +41,7 @@
           </div>
         </div>
     </el-header>
-    <el-container style="height: 800px; border: 1px solid #eee">
+    <el-container style="height:800px; border: 1px solid #eee">
       <!-- 侧边栏 -->
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
         <el-menu 
@@ -90,29 +90,25 @@
 
 <style scoped>
   
-   .el-header {
+  .home-container {
+   
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+
+  .el-header {
     background-color: #F7F7F7;
     color: #333;
     line-height: 60px;
   }
-  
+
   .el-breadcrumb{
-    padding-top:20px; 
+    padding-top:20px;
   }
   .el-aside {
     color: #333;
-  }
-
-  .home-header {
-    background-color: #ffffff;
-    color: #333;
-    text-align: center;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: content-box;
-    padding: 0px;
   }
 </style>
 
