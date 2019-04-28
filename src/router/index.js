@@ -32,5 +32,6 @@ export default new Router({
       component:AdminHome
     }
   ],
-  mode:"history"  //不用显示#号
+  mode:"history" , //不用显示#号
+  base: '/dist/'
 })
