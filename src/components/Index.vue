@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header>
+    <el-header style="line-height: 20px;background-color: white;">
        <el-row style="background-color:#f5f7fa;height: 40px;width: 100%;margin-top: 10px">
           <el-col style="border-left: #409EFF 5px solid;height: 100%;"> 
               <p style="font-size: 14px;margin-left: 15px;margin-top: 10px;margin-bottom: 0px;">热点问题推荐</p>

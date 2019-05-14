@@ -70,11 +70,11 @@
       </el-aside>
       <!-- <div style="width: 100%"> -->
       <el-container>
-        <el-header style="font-size: 12px">
-        <el-breadcrumb separator-class="el-icon-arrow-right" style="padding-top: 25px;">
-          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item v-if="this.$router.currentRoute.name!=null" v-text="this.$router.currentRoute.name"></el-breadcrumb-item>
-        </el-breadcrumb>
+        <el-header style="font-size: 12px;color: #333;background-color: #F7F7F7;line-height: 60px;">
+          <el-breadcrumb separator-class="el-icon-arrow-right" style="padding-top: 25px;">
+            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item v-if="this.$router.currentRoute.name!=null" v-text="this.$router.currentRoute.name"></el-breadcrumb-item>
+          </el-breadcrumb>
         </el-header>
         <router-view></router-view>
       </el-container>
@@ -96,12 +96,6 @@
     top: 0px;
     left: 0px;
     width: 100%;
-  }
-
-  .el-header {
-    background-color: #F7F7F7;
-    color: #333;
-    line-height: 60px;
   }
 
   .el-breadcrumb{

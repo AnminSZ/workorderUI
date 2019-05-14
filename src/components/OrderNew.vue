@@ -117,7 +117,8 @@
                 //refresh pages
                //_this.$router.push({name: '/order/list'});
                //window.location.href="http://127.0.0.1:8081/order/list";
-               window.location.href="http://127.0.0.1:8081/#/order/list";
+              window.location.href="http://49.4.11.10/#/order/list";
+               //window.history.back(-1);
               }
             });
           } else {
